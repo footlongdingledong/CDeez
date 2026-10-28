@@ -1,0 +1,1 @@
+ALTER TABLE "cds" ADD COLUMN "genre" text;

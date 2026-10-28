@@ -1,0 +1,6 @@
+.env
+node_modules
+.db
+tsconfig.json
+package.json
+planning.txt
