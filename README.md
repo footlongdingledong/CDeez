@@ -1,4 +1,4 @@
-Basic CD cataloging CLI program
+Basic CD cataloging TypeScript CLI program
 
 First real attempt at an unguided project writing a program from scratch. Wouldn't actually recommend anyone uses this lol
 
