@@ -4,8 +4,12 @@ import { cds } from "../schema.js";
 import { yargHandler } from "../../../cmds/yarg_handler.js";
 import { fixDecade } from "../../../cmds/filter_handling.js";
 
-export async function addCD(cfg: Config, album: string, artist: string, year: number) {
-  const result = await cfg.db.insert(cds).values({ album: album, artist: artist, year: year }).returning();
+export async function addCD(cfg: Config, album: string, artist: string, year: number, genre?: string) {
+  if (genre) {
+    const result = await cfg.db.insert(cds).values({ album: album, artist: artist, year: year, genre: genre }).returning();
+    return result;
+  }
+  const result = await cfg.db.insert(cds).values({ album: album, artist: artist, year: year}).returning();
   return result;
 }
 

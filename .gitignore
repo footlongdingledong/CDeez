@@ -1,6 +1,7 @@
 .env
 node_modules
 .db
+dist/
 tsconfig.json
 package.json
 planning.txt
